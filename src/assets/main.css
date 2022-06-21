@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.router-link-exact-active{
+  color: #339900;
+}

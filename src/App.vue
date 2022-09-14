@@ -3,16 +3,20 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 // import HelloWorld from './components/HelloWorld.vue';
 // import Demo from './components/Demo.vue';
-
+import { storeToRefs } from "pinia";
 import useCounterStore from "./stores/counter";
 const store = useCounterStore();
 const clickHandle = () => {
   store.plus();
 };
+const { list } = storeToRefs(store);
 </script>
 
 <template>
   <button @click="clickHandle">{{ store.count }}</button>
+  <ul>
+    <li v-for="item in list" :key="item.id">{{ item.name }}</li>
+  </ul>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <Demo /> -->
   <router-link :to="{ name: 'Home' }">【首页】</router-link>

@@ -17,7 +17,7 @@ const clickHandle = () => {
   <Demo /> -->
   <router-link :to="{ name: 'Home' }">【首页】</router-link>
   <router-link :to="{ name: 'List' }">【列表】</router-link>
-  <router-link :to="{ name: 'About' }">【关于】</router-link>
+  <router-link :to="{ name: 'RichText' }">【富文本编辑器】</router-link>
   <router-link :to="{ name: 'Todos' }">【TodoList】</router-link>
   <hr />
   <router-view></router-view>

@@ -15,9 +15,9 @@ const router = createRouter({
       component: () => import('../views/ListView.vue'),
     },
     {
-      path: '/about',
-      name: 'About',
-      component: () => import('../views/AboutView.vue'),
+      path: '/rich-text',
+      name: 'RichText',
+      component: () => import('../views/RichTextView.vue'),
     },
     {
       path: '/todos',

@@ -12,7 +12,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, computed } from "vue";
+import { ref, computed } from 'vue';
 
 type IItem = {
   id: number;
@@ -23,26 +23,27 @@ type IItem = {
 const list = ref<IItem[]>([
   {
     id: 1,
-    txt: "商品1",
+    txt: '商品1',
     chk: false,
   },
   {
     id: 2,
-    txt: "商品2",
+    txt: '商品2',
     chk: false,
   },
   {
     id: 3,
-    txt: "商品3",
+    txt: '商品3',
     chk: true,
   },
   {
     id: 4,
-    txt: "商品4",
+    txt: '商品4',
     chk: false,
   },
 ]);
 
+// 计算属性实现
 const checkAll = computed({
   set(v: boolean) {
     list.value.forEach((item) => (item.chk = v));

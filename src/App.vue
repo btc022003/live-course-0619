@@ -2,10 +2,17 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 // import HelloWorld from './components/HelloWorld.vue';
-import Demo from './components/Demo.vue';
+// import Demo from './components/Demo.vue';
+
+import useCounterStore from "./stores/counter";
+const store = useCounterStore();
+const clickHandle = () => {
+  store.plus();
+};
 </script>
 
 <template>
+  <button @click="clickHandle">{{ store.count }}</button>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <Demo /> -->
   <router-link :to="{ name: 'Home' }">【首页】</router-link>
